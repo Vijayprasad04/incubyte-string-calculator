@@ -5,6 +5,7 @@ String Calculator TDD Kata
 - Handles empty and single strings
 - Handle comma or newline-separated integers
 - Handle custom delimiters
+- Throws error on negative inputs
 
 ## Setup
 ```bash

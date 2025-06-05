@@ -9,7 +9,12 @@ export function add(numbers: string): number {
         numbers = parts[1];
     }
 
-    const nums = numbers.split(delimiter);
+    const nums = numbers.split(delimiter).map(Number);
+    const negatives = nums.filter(n => n<0);
 
-    return nums.reduce((sum, num) => sum + parseInt(num), 0);
+    if(negatives.length > 0) {
+        throw new Error(`negative numbers not allowed : ${negatives.join(',')}`);
+    }
+
+    return nums.reduce((sum, num) => sum + num, 0);
 }
