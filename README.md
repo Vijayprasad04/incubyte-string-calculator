@@ -3,6 +3,7 @@ String Calculator TDD Kata
 
 ## Features
 - Handles empty and single strings
+- Handle comma or newline-separated integers
 
 ## Setup
 ```bash

@@ -14,3 +14,13 @@ test('returns number for single input', () => {
 test('returns sum of two comma-separated numbers', () => {
     expect(add('1,2')).toBe(3);
 });
+
+/** Multiple Comma-separated numbers */
+test('returns sum of multiple numbers', () => {
+    expect(add('1,2,3,4')).toBe(10);
+});
+
+/** New line separated numbers */
+test('supports new line as separator', () => {
+    expect(add('1\n2,3')).toBe(6);
+});
