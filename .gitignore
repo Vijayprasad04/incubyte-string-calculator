@@ -1,0 +1,18 @@
+# Node modules
+node_modules/
+
+# Build output
+dist/
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS-specific
+.DS_Store
+
+# Jest coverage output
+coverage/
+
+# Environment files
+.env
