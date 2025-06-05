@@ -1,5 +1,8 @@
 /** 'add' function to return sum of numbers */
 export function add(numbers: string): number {
     if(numbers === "") return 0;
-    return parseInt(numbers);
+    
+    const parts = numbers.split(',');
+
+    return parts.reduce((sum, num) => sum + parseInt(num), 0);
 }

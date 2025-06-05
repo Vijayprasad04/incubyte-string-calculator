@@ -9,3 +9,8 @@ test('returns 0 for empty string', () => {
 test('returns number for single input', () => {
     expect(add('5')).toBe(5);
 });
+
+/** Comma-separated numbers */
+test('returns sum of two comma-separated numbers', () => {
+    expect(add('1,2')).toBe(3);
+});
