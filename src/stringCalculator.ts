@@ -2,7 +2,14 @@
 export function add(numbers: string): number {
     if(numbers === "") return 0;
     
-    const parts = numbers.split(/,|\n/);
+    let delimiter = /,|\n/;
+    if(numbers.startsWith('//')) {
+        const parts = numbers.split('\n');
+        delimiter = new RegExp(parts[0].slice(2));
+        numbers = parts[1];
+    }
 
-    return parts.reduce((sum, num) => sum + parseInt(num), 0);
+    const nums = numbers.split(delimiter);
+
+    return nums.reduce((sum, num) => sum + parseInt(num), 0);
 }
